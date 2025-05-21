@@ -3,17 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pokémon Verkenner</title>
+  <title>Pokédex</title>
   <link rel="stylesheet" href="./src/style.css" />
 </head>
 <body>
   <header>
-    <h1>Pokémon Verkenner</h1>
+    <h1>Pokédex</h1>
+
     <input type="text" id="search" placeholder="Zoek een Pokémon..." />
+
+    <select id="type-filter">
+      <option value="all">Alle types</option>
+    </select>
+
+    <select id="sort-select">
+      <option value="id-asc">ID oplopend</option>
+      <option value="id-desc">ID aflopend</option>
+      <option value="name-asc">Naam A → Z</option>
+      <option value="name-desc">Naam Z → A</option>
+      <option value="height-asc">Hoogte laag → hoog</option>
+      <option value="height-desc">Hoogte hoog → laag</option>
+      <option value="weight-asc">Gewicht laag → hoog</option>
+      <option value="weight-desc">Gewicht hoog → laag</option>
+    </select>
+
+    <label class="fav-toggle">
+      <input type="checkbox" id="show-favorites-toggle" />
+      Alleen favorieten tonen
+    </label>
   </header>
 
   <main>
-    <div id="pokemon-list"></div>
+    <div id="pokemon-list" class="pokemon-list"></div>
   </main>
 
   <script src="./src/main.js" type="module"></script>
